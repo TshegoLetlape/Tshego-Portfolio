@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <!--Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Tshego Letlape</title>
+  </head>
+  <body>
+    <!-- NavBar Section -->
+    <nav id="desktop-nav">
+      <div class="logo"></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">TSHEGO</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!--Hero Section-->
+    <section id="profile">
+      <div class="section__pic-container1">
+        <video
+          id="background-video"
+          autoplay
+          loop
+          muted
+          poster="Assets/background.jpg"
+        >
+          <source src="Assets/hero2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="section__text">
+        <h1 class="title">TSHEGO LETLAPE</h1>
+        <p class="section__text__p2">FRONT-END DEVELOPER</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./Assets/Tshegofatso-Letlape-CV.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https:www.linkedin.com/in/tshegofatsoletlape/', '_blank')"
+          />
+
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="window.open('https:github.com/TshegoLetlape', '_blank')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section-->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">
+        <a href="https://git.io/typing-svg"
+          ><img
+            src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=000000&random=false&width=435&lines=PASSIONATE+FRONT-END+DEVELOPER;+USER+FRIENDLY+WEB+EXPERIENCES;SKILLED+IN+MODERN+WEB+TECHNOLOGIES;HUGE+FAN+OF+MUSIC%2C+FILMS+AND+BOOKS;LIFE+LONG+LEARNER..........."
+            alt="Typing SVG"
+        /></a>
+      </h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/tshegzz.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Freelancing <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bcom Accounting<br />Web Development Bootcamp</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I'm a frontend developer with a burning passion for creating
+              captivating user interfaces and delightful user experiences. I
+              consider myself as a creative who possesses the ability to work
+              effectively in a team and adapt to constantly evolving work
+              environments, applying problem solving methods when necessary.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <!--Skills Section-->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Tech Stack</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Tailwind CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <!--Projects-->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/musiceve.PNG"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Ticket Station</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https:github.com/TshegoLetlape/ticket-station', '_blank')"
+              >
+                < Code >
+              </button>
+
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https:tshegoletlape.github.io/ticket-station/', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/React recipe.PNG"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              React Recipe Project
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https:github.com/TshegoLetlape/recipe-app', '_blank')"
+              >
+                < Code >
+              </button>
+
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https:saucy-spirals.netlify.app/', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/sneakervault.PNG"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Shopping Cart</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https:github.com/TshegoLetlape/Sneaker-Vault-Shopping-Cart', '_blank')"
+              >
+                < Code >
+              </button>
+
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https:tshegoletlape.github.io/Sneaker-Vault-Shopping-Cart/', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <br />
+
+    <!--Memory Game-->
+    <p class="section__text__p1">Lets Play</p>
+    <h1 class="title">How Good is Your Memory?</h1>
+    <section id="game">
+      <div class="game_container">
+        <h2>Memory Game</h2>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload();">
+          Reset Game
+        </button>
+      </div>
+    </section>
+
+    <!--Contact-->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a
+              class="last"
+              href="mailto:tshegofatsoletlape03@gmail.com"
+              target="_blank"
+            >
+              tshegofatsoletlape03@gmail.com
+            </a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a
+              class="last"
+              href="https://www.linkedin.com/in/tshegofatsoletlape/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Tshegofatso Letlape 2023</p>
+    </footer>
+    <!--JavaScript-->
+    <script src="script.js"></script>
+  </body>
+</html>
