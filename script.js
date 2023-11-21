@@ -4,50 +4,55 @@ function toggleMenu() {
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
-const emojis = [
-  "😍",
-  "😍",
-  "😎",
-  "😎",
-  "🎃",
-  "🎃",
-  "🥳",
-  "🥳",
-  "👽",
-  "👽",
-  "🤑",
-  "🤑",
-  "👩",
-  "👩",
-  "🦾",
-  "🦾",
+
+const imageSources = [
+  "/assets/adele21.jpg",
+  "/assets/bday.jpg",
+  "/assets/college dropout.jpg",
+  "/assets/culture.jpg",
+  "/assets/ds2.jpg",
+  "/assets/mbdtf.jpg",
+  "assets/nwts.jpg",
+  "assets/sheabutterbaby.jpg",
+
+  // Add more image paths as needed
 ];
-var shuf_emojis = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
-for (var i = 0; i < emojis.length; i++) {
+
+// Duplicate image sources to pair them up for the game
+const images = imageSources.concat(imageSources);
+
+var shuffledImages = images.sort(() => Math.random() - 0.5);
+
+for (var i = 0; i < shuffledImages.length; i++) {
   let box = document.createElement("div");
   box.className = "item";
-  box.innerHTML = shuf_emojis[i];
+
+  // Create img elements instead of emojis
+  let img = document.createElement("img");
+  img.src = shuffledImages[i];
+  img.classList.add("image-item");
+
+  box.appendChild(img);
 
   box.onclick = function () {
     this.classList.add("boxOpen");
     setTimeout(function () {
       if (document.querySelectorAll(".boxOpen").length > 1) {
-        if (
-          document.querySelectorAll(".boxOpen")[0].innerHTML ==
-          document.querySelectorAll(".boxOpen")[1].innerHTML
-        ) {
-          document.querySelectorAll(".boxOpen")[0].classList.add("boxMatch");
-          document.querySelectorAll(".boxOpen")[1].classList.add("boxMatch");
+        let openBoxes = document.querySelectorAll(".boxOpen");
 
-          document.querySelectorAll(".boxOpen")[1].classList.remove("boxOpen");
-          document.querySelectorAll(".boxOpen")[0].classList.remove("boxOpen");
+        if (openBoxes[0].innerHTML === openBoxes[1].innerHTML) {
+          openBoxes.forEach((box) => {
+            box.classList.add("boxMatch");
+            box.classList.remove("boxOpen");
+          });
 
-          if (document.querySelectorAll(".boxMatch").length == emojis.length) {
-            alert("W FOR YOU 🦾");
+          if (document.querySelectorAll(".boxMatch").length === images.length) {
+            alert("Congratulations! You've matched all the images!");
           }
         } else {
-          document.querySelectorAll(".boxOpen")[1].classList.remove("boxOpen");
-          document.querySelectorAll(".boxOpen")[0].classList.remove("boxOpen");
+          openBoxes.forEach((box) => {
+            box.classList.remove("boxOpen");
+          });
         }
       }
     }, 500);
@@ -55,3 +60,8 @@ for (var i = 0; i < emojis.length; i++) {
 
   document.querySelector(".game").appendChild(box);
 }
+
+document.querySelectorAll(".image-item").forEach((img) => {
+  img.style.width = "100%";
+  img.style.height = "100%";
+});

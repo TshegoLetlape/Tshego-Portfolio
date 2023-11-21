@@ -46,19 +46,19 @@
   }
 
   .title {
-    font-size: 2.5rem; /* Adjust the font size for larger screens */
+    font-size: 2.5rem;
   }
 
   .section__text__p2 {
-    font-size: 1.5rem; /* Adjust the font size for larger screens */
+    font-size: 1.5rem;
   }
 
   .btn-container {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    flex-direction: column;
   }
 
   .btn {
-    margin-bottom: 1rem; /* Add some spacing between buttons */
+    margin-bottom: 1rem;
   }
 
   #game {
@@ -132,22 +132,78 @@
   }
 
   .title {
-    font-size: 2rem; /* Adjust the font size for smaller screens */
+    font-size: 2rem;
   }
 
   .section__text__p2 {
-    font-size: 1.25rem; /* Adjust the font size for smaller screens */
+    font-size: 1.25rem;
   }
 
   .btn-container {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    flex-direction: column;
   }
 
   .btn {
-    margin-bottom: 1rem; /* Add some spacing between buttons */
+    margin-bottom: 1rem;
   }
 
   #game {
     padding: 1rem;
+  }
+}
+/* Default styles */
+
+/* Styles for smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  #background-video {
+    display: none; /* Hide the video on smaller screens */
+  }
+
+  #profile {
+    background-color: white;
+  }
+
+  .section__text {
+    text-align: center; /* Center-align the text */
+    color: black;
+    padding: 0px 40px 130px; /* Add padding for space around the text */
+    margin-bottom: 50px;
+  }
+
+  #socials-container {
+    display: flex;
+    justify-content: center; /* Center-align icons */
+    margin-top: 20px; /* Adjust top margin for icons */
+  }
+
+  #socials-container .icon {
+    margin: 0px 0px 0px 95px;
+  }
+}
+/* Default styles */
+
+/* Styles for smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .title,
+  .section__text__p1 {
+    text-align: center; /* Center-align the text */
+  }
+
+  #game {
+    padding: 20px; /* Add padding around the game section */
+  }
+
+  .game_container {
+    max-width: 90%; /* Limit the container width */
+    margin: 0 auto; /* Center-align the container */
+  }
+
+  .game {
+    /* Adjust the game styles for smaller screens if needed */
+  }
+
+  .reset {
+    display: block; /* Display the reset button as a block element */
+    margin: 20px auto; /* Center-align the reset button */
   }
 }

@@ -1,6 +1,7 @@
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -166,6 +167,9 @@ section {
   display: flex;
 }
 /* PROFILE SECTION */
+.title {
+  font-family: "Playfair Display", serif;
+}
 
 #profile {
   display: flex;
