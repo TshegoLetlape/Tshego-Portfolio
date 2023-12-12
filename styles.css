@@ -166,6 +166,93 @@ section {
 .section-container {
   display: flex;
 }
+
+/* CSS for the projects section */
+.work {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.work__heading {
+  margin-bottom: 50px;
+}
+
+.work__carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+
+.work__slide {
+  flex: 0 0 auto;
+  width: 70%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.work__slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.work__info {
+  position: absolute;
+  height: 29%;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 18px;
+  border-radius: 8px;
+  text-align: left;
+  width: calc(92% - 380px);
+  transition: transform 0.3s ease;
+}
+
+.work__title {
+  margin-bottom: 6px;
+}
+
+.work__description {
+  margin-bottom: 15px;
+}
+
+.work__link {
+  display: inline-block;
+  padding: 4px 6px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.work__link:hover {
+  background-color: #555;
+}
+
+.work__navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.work__navigation-el {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.work__navigation-el--is-active {
+  background-color: #333;
+}
+
 /* PROFILE SECTION */
 .title {
   font-family: "Playfair Display", serif;
@@ -195,7 +282,7 @@ section {
   text-align: center;
   color: #000;
   margin-right: 500px;
-  margin-bottom: 120px;
+  margin-bottom: 170px;
   background-color: #fcfcfc;
   border-radius: 25px;
   padding-bottom: 15px;
@@ -392,13 +479,16 @@ article .icon {
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background: rgb(255, 255, 255);
+  padding: 80px 0px;
 }
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: 1rem;
   width: 90%;
   height: 90%;
+  margin-bottom: 15px;
+  margin-top: -8px;
 }
 
 .project-title {
